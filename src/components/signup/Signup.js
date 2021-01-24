@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 
-
+const userService = new UserService()
 
 
 const useStyles = makeStyles((theme) => ({
@@ -85,7 +85,20 @@ const Signup = () => {
 
     const handleSignUp = (e) => {
         e.preventDefault()
+
+        userService.createNewUser(name, surname, email, password, phone)
+            .then(response => {
+                console.log(response)
+                setName('')
+                setSurname('')
+                setEmail('')
+                setPassword('')
+                setPhone('')
+            })
+            .catch(err => console.log(err))
         setMessage('')
+
+
     }
 
 const classes = useStyles()
@@ -98,7 +111,7 @@ const classes = useStyles()
                 <Typography component='h1' variant='h5'>
                     Sign Up
                 </Typography>
-                <form className={classes.form} action={handleSignUp}>
+                <form className={classes.form} onSubmit={handleSignUp}>
 
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
