@@ -39,6 +39,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/" component={Home} />
         </Switch>
+        <div style={{ marginBottom: "60px" }}></div>
         <Footer />
       </div>
     </Router>
