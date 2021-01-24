@@ -87,7 +87,6 @@ const Signup = () => {
         e.preventDefault()
         userService.createNewUser(name, surname, email, password, phone)
             .then(response => {
-                console.log(response)
                 setName('')
                 setSurname('')
                 setEmail('')

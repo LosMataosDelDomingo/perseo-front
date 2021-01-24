@@ -16,7 +16,6 @@ class UserService {
             email,
             password
         }
-        console.log(user)
         return this.service.post('/signin', user)
             .then(response => response.data)
     }
