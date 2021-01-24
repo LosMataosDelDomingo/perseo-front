@@ -59,7 +59,6 @@ const Login = () => {
         e.preventDefault()
         userService.getUserByEmail(email, password)
             .then(response => {
-                console.log(response)
             })
 
         setMessage('')
