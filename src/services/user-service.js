@@ -19,7 +19,7 @@ class UserService {
         return this.service.post('/', {newUser})
             .then(response => response.data)
     }
-    updateUser = (uptadedUser) => {
+    updateUser = (updatedUser) => {
         return this.service.patch('/', {updatedUser})
             .then(response => response.data)
     }
