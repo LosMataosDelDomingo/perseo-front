@@ -42,6 +42,7 @@ const Navbar = () => {
         <div className={classes.root}>
             <AppBar position='static' className={classes.navbar}>
                 <Toolbar>
+                    dasdmasfdj
                     <IconButton
                         edge='start'
                         color='inherit'
