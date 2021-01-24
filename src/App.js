@@ -14,6 +14,7 @@ import Landing from './components/landing/Landing'
 import Footer from './components/footer/Footer'
 import { Profile } from './components/Profile';
 import {Header} from "./components/navbar"
+import {CenteredGrid as Home} from "./components/weOffer/weOffer"
 
 function App() {
   const routeResult = useRoutes(Routes)
@@ -25,7 +26,7 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/" component={Landing} />
+          <Route path="/" component={Home} />
           <Route path="/profile" component={Profile} />
         </Switch>
         <Footer />

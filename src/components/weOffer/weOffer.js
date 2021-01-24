@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {ImgMediaCard} from "../frontImage/FrontImage"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,12 +27,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CenteredGrid() {
+export function CenteredGrid() {
   const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <div className={classes.root}>
+      <ImgMediaCard/>
       <Grid container spacing={3}>
         
         <Grid item xs={6}>
