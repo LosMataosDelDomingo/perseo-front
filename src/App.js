@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { useRoutes, A } from 'hookrouter'
 
 import Link from '@material-ui/core/Link'
@@ -14,10 +14,17 @@ import Landing from './components/landing/Landing'
 function App() {
   const routeResult = useRoutes(routes)
   return (
-    <div className="App">
-      <Navbar />
-      {routeResult} 
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/" component={Landing} />
+          {/* <Route path="/" component={Landing} /> */}
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
