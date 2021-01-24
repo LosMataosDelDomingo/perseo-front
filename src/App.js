@@ -14,7 +14,17 @@ import Landing from './components/landing/Landing'
 import Footer from './components/footer/Footer'
 import { Profile } from './components/Profile';
 import {Header} from "./components/navbar"
-import {CenteredGrid as Home} from "./components/weOffer/weOffer"
+import {CenteredGrid} from "./components/weOffer/weOffer"
+import { ImgMediaCard } from "./components/frontImage/FrontImage"
+
+const Home = () => {
+  return(
+    <>
+      <ImgMediaCard />
+      <CenteredGrid />
+    </>
+  )
+}
 
 function App() {
   const routeResult = useRoutes(Routes)
@@ -26,8 +36,8 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/" component={Home} />
           <Route path="/profile" component={Profile} />
+          <Route path="/" component={Home} />
         </Switch>
         <Footer />
       </div>

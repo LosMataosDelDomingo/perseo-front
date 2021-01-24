@@ -16,7 +16,7 @@ export const Profile = () => {
     return (
         <main id="profile">
             <div className="profile-head section">
-                <div className="image-container">
+                <div className="image-container" style={{ textAlign: "center" }}>
                     <img src="/profile.jpg" alt="" />
                     <div style={{ flexBasis: "100%", margin: "auto" }}>
                         <IconButton aria-label="delete" style={{ margin: "0px 15px" }}>

@@ -8,17 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 1000,
-  },
-});
-
 export function ImgMediaCard() {
-  const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card style={{ marginBottom: "30px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -27,7 +20,7 @@ export function ImgMediaCard() {
           image="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2019/10/shutterstock_1135204490-1.jpg"
           title="Contemplative Reptile"
         />
-        <CardContent>
+        <CardContent style={{ textAlign: "center" }}>
           <Typography gutterBottom variant="h5" component="h2">
             PERSEO
           </Typography>
