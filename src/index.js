@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './components/navbar/Navbar'
+import WeOffer from './components/WeOffer/WeOffer'
+import FrontImage from './components/FrontImage/FrontImage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <FrontImage />
+    <WeOffer />
   </React.StrictMode>,
   document.getElementById('root')
 );
