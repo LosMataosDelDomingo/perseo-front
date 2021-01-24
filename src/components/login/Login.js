@@ -70,7 +70,7 @@ const classes = useStyles()
                 <Typography component='h1' variant='h5'>
                     Log In
                 </Typography>
-                <form className={classes.form} action={handleSignUp}>
+                <form className={classes.form} onSubmit={handleSignUp}>
 
                     <Grid container spacing={2}>
                         
