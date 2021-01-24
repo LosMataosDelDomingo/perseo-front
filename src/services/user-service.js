@@ -3,7 +3,7 @@ import axios from 'axios'
 class UserService {
     constructor(){
         let service = axios.create({
-            baseURL: 'https://perseo-api.herokuapp.com/api'
+            baseURL: 'https://perseo-api.herokuapp.com/api/auth'
         })
         this.service = service
     }
@@ -11,12 +11,28 @@ class UserService {
         return this.service.get('')
             .then(response => response.data)
     }
-    getUserById = (idUser, extended) => {
-        return this.service.get(`/${idUser}/${extended}?`)
+    getUserByEmail = (email, password) => {
+        const user = {
+            email,
+            password
+        }
+        console.log(user)
+        return this.service.post('/signin', user)
             .then(response => response.data)
     }
-    createNewUser = (name, surname, email, password, phone) => {
-        return this.service.post('/users', {name, surname, email, password, phone})
+    createNewUser = (name, surname, email, password) => {
+        const birthAge = 1990
+        const admin = false
+        const newUser = 
+            {
+                name,
+                surname,
+                email,
+                password,
+                birthAge,
+                admin
+            }
+        return this.service.post('/signup', newUser)
             .then(response => response.data)
     }
     updateUser = (updatedUser) => {

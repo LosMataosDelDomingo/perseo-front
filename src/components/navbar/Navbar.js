@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRoutes, A } from 'hookrouter'
 
 import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -15,6 +16,8 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/core/MenuItem'
+
+import routes from '../../Routes/Routes'
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -33,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
     const classes = useStyles()
+
     return(
             <div className={classes.root}>
                 <AppBar position='static' className={classes.navbar}>
@@ -45,9 +49,10 @@ const Navbar = () => {
                             >
                             <MenuIcon />
                             </IconButton>
-                                <Button color='inherit'>Cursos</Button>
-                                <Button color='inherit'>Login</Button>
-                                <Button color='inherit'>SignUp</Button>
+                                <Button color='inherit'><A href="/">Home</A></Button>
+                                <Button color='inherit'><A href="/cursos">Cursos</A></Button>
+                                <Button color='inherit'><A href="/login">Login</A></Button>
+                                <Button color='inherit'><A href="signup">Sign Up</A></Button>
                     </Toolbar>
                 </AppBar>
             </div>

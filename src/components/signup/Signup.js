@@ -85,7 +85,6 @@ const Signup = () => {
 
     const handleSignUp = (e) => {
         e.preventDefault()
-
         userService.createNewUser(name, surname, email, password, phone)
             .then(response => {
                 console.log(response)
@@ -170,7 +169,7 @@ const classes = useStyles()
                         fullWidth
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        {/* <Grid item xs={12}>
                             <TextField
                         type="text" 
                         name='phone' 
@@ -183,7 +182,7 @@ const classes = useStyles()
                         id="phone"
                         fullWidth
                             />
-                        </Grid>
+                        </Grid> */}
                         {/* <Grid item xs={12}>
                             <TextField
                         type="text" 
