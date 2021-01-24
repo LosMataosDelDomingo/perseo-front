@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 
-
+const userService = new UserService()
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,6 +57,11 @@ const Login = () => {
 
     const handleSignUp = (e) => {
         e.preventDefault()
+        userService.getUserByEmail(email, password)
+            .then(response => {
+                console.log(response)
+            })
+
         setMessage('')
     }
 
